@@ -3,11 +3,28 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "@chakra-ui/icons": "^2.0.11",
+    "@chakra-ui/react": "^2.3.6",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@fontsource/poppins": "^4.5.10",
+    "framer-motion": "^7.6.1",
+    "nextjs-progressbar": "^0.0.16",
+    "popmotion": "^11.0.5",
+    "react-icons": "^4.6.0",
+    "react-scroll": "^1.8.8",
+    "react-stacked-center-carousel": "^1.0.12",
+    "zustand": "^4.1.2"
+  },
+  "devDependencies": {
+    "eslint": "8.25.0",
+    "eslint-config-next": "12.3.1"
   }
 }
