@@ -61,11 +61,11 @@ const NewsContainer = (props) => {
           w={"100px"}
           mt={"30px"}
           height={"30px"}
-          backgroundColor={"#19BCBB"}
+          backgroundColor={"#00CE7C"}
           borderStartStartRadius={"0px"}
           borderEndStartRadius={"0px"}
-          borderStartEndRadius={"15px"}
-          borderEndEndRadius={"15px"}
+          borderStartEndRadius={"10px"}
+          borderEndEndRadius={"10px"}
           position={"absolute"}
           px={"12px"}
           alignItems={"center"}
