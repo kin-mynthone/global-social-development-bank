@@ -341,7 +341,7 @@ export default function Footer() {
           sm: "10px",
         }}
       >
-        © 2022 The World Bank Group, All Rights Reserved.
+        © 2022 Global Social Development Bank, All Rights Reserved.
       </chakra.p>
     </Flex>
   );
