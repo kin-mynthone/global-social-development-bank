@@ -256,11 +256,11 @@ export default function Home() {
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <Flex
-            id="about"
             dir="row"
             justifyContent={["center", "center", "flex-start", "flex-start"]}
           >
             <chakra.h3
+              id="about"
               fontFamily={"Poppins.black"}
               paddingTop={["30px", "30px", "30px", "30px", "23px", "15px"]}
               paddingBottom={["50px", "50px", "50px", "50px", "50px", "50px"]}
@@ -535,11 +535,11 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <Flex
-            id="whatwedo"
             dir="row"
             justifyContent={["center", "center", "flex-start", "flex-start"]}
           >
             <chakra.h3
+              id="whatwedo"
               fontFamily={"Poppins.black"}
               paddingTop={["30px", "30px", "30px", "30px", "23px", "15px"]}
               fontSize={["30px", "40px", "40px", "40px", "40px", "50px"]}
@@ -761,6 +761,7 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
             justifyContent={["center", "center", "flex-start", "flex-start"]}
           >
             <chakra.h3
+              id="ourgoal"
               fontFamily={"Poppins.black"}
               paddingTop={["30px", "30px", "30px", "30px", "23px", "15px"]}
               fontSize={["30px", "40px", "40px", "40px", "40px", "50px"]}
@@ -1002,6 +1003,12 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
                 cursor: "pointer",
               }}
               flexDirection={"row"}
+              whileTap={{
+                scale: 0.9,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
               onClick={null} //update this
             >
               <Text
@@ -1187,7 +1194,6 @@ The Bank’s work also spans across several development goals and cross-cutting 
           <VStack spacing={"55px"}>
             <VStack alignItems={"start"} spacing={"-2px"} width={"100%"}>
               <Flex
-                id="topicstoread"
                 dir="row"
                 justifyContent={[
                   "center",
@@ -1197,6 +1203,7 @@ The Bank’s work also spans across several development goals and cross-cutting 
                 ]}
               >
                 <chakra.h3
+                  id="workwithus"
                   fontFamily={"Poppins.black"}
                   paddingTop={["30px", "30px", "30px", "30px", "23px", "15px"]}
                   fontSize={["30px", "40px", "40px", "40px", "40px", "50px"]}
@@ -1292,6 +1299,12 @@ The Bank’s work also spans across several development goals and cross-cutting 
             <MotionButton
               px={"30px"}
               py={"30px"}
+              whileTap={{
+                scale: 0.9,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
               backgroundColor={"#22C086"}
               _focus={{ border: "none" }}
               _focusWithin={{ backgroundColor: "#22C086" }}
@@ -1309,6 +1322,12 @@ The Bank’s work also spans across several development goals and cross-cutting 
             <MotionButton
               px={"30px"}
               py={"30px"}
+              whileTap={{
+                scale: 0.9,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
               backgroundColor={"#22C086"}
               _focus={{ border: "none" }}
               _focusWithin={{ backgroundColor: "#22C086" }}
@@ -1326,6 +1345,12 @@ The Bank’s work also spans across several development goals and cross-cutting 
             <MotionButton
               px={"30px"}
               py={"30px"}
+              whileTap={{
+                scale: 0.9,
+              }}
+              whileHover={{
+                scale: 1.1,
+              }}
               backgroundColor={"#22C086"}
               _focus={{ border: "none" }}
               _focusWithin={{ backgroundColor: "#22C086" }}

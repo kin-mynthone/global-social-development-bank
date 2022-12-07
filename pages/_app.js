@@ -56,6 +56,7 @@ function MyApp({ Component, pageProps }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 100 }}
             transition={{ ease: "easeIn", duration: 10 }}
+            zIndex={20}
           >
             <NavigationBar />
           </MotionFlex>

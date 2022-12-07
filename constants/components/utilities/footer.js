@@ -307,6 +307,12 @@ export default function Footer() {
                 Keep Updated
               </Text>
               <MotionButton
+                whileTap={{
+                  scale: 0.9,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                }}
                 width={"180px"}
                 backgroundColor={"#22C086"}
                 _focus={{ border: "none" }}

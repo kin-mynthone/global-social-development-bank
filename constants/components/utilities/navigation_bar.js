@@ -42,7 +42,7 @@ export default function NavigationBar() {
   const bg = useColorModeValue("white", "#474747");
   const MobileNavContent = (
     <VStack
-      pos="absolute"
+      zIndex={10}
       top={0}
       left={0}
       right={0}
@@ -50,52 +50,18 @@ export default function NavigationBar() {
       flexDirection="column"
       p={2}
       pb={4}
-      m={2}
+      m={5}
       bg={bg}
       spacing={3}
       borderRadius={"20px"}
-      shadow="sm"
+      shadow="lg"
     >
-      {/* <NextLink passHref href="#">
-        <MotionButton
-          backgroundColor={"transparent"}
-          _focus={{ border: "none" }}
-          _focusWithin={{ backgroundColor: "transparent" }}
-          _hover={{
-            backgroundColor: "transparent",
-            cursor: "pointer",
-          }}
-          flexDirection={"row"}
-          whileTap={{
-            scale: 0.9,
-          }}
-          whileHover={{
-            scale: 1.1,
-            color: cl,
-          }}
-          onClick={null} //update this
-        >
-          <Text
-            fontWeight={getPageIndex == 0 ? "black" : "thin"}
-            fontSize="14px"
-            color={getPageIndex == 0 ? "#22C086" : "#474747"}
-            _dark={{
-              color: getPageIndex == 0 ? "#22C086" : "gray",
-            }}
-            _hover={{
-              color: "#22C086",
-            }}
-          >
-            Home
-          </Text>
-        </MotionButton>
-      </NextLink> */}
       <Link
         activeClass="active"
         to="about"
         spy={true}
         smooth={true}
-        offset={-350}
+        offset={0}
         duration={1000}
       >
         <MotionButton
@@ -133,7 +99,7 @@ export default function NavigationBar() {
       </Link>
       <Link
         activeClass="active"
-        to="proj"
+        to="whatwedo"
         spy={true}
         smooth={true}
         offset={0}
@@ -174,7 +140,48 @@ export default function NavigationBar() {
       </Link>
       <Link
         activeClass="active"
-        to="services"
+        to="ourgoal"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={1000}
+      >
+        <MotionButton
+          backgroundColor={"transparent"}
+          _focus={{ border: "none" }}
+          _focusWithin={{ backgroundColor: "transparent" }}
+          _hover={{
+            backgroundColor: "transparent",
+            cursor: "pointer",
+          }}
+          flexDirection={"row"}
+          whileTap={{
+            scale: 0.9,
+          }}
+          whileHover={{
+            scale: 1.1,
+            color: cl,
+          }}
+          onClick={null} //update this
+        >
+          <Text
+            fontWeight={getPageIndex == 2 ? "black" : "thin"}
+            fontSize="14px"
+            color={getPageIndex == 2 ? "#22C086" : "#474747"}
+            _dark={{
+              color: getPageIndex == 2 ? "#22C086" : "gray",
+            }}
+            _hover={{
+              color: "#22C086",
+            }}
+          >
+            Our goal
+          </Text>
+        </MotionButton>
+      </Link>
+      <Link
+        activeClass="active"
+        to="workwithus"
         spy={true}
         smooth={true}
         offset={0}
@@ -209,7 +216,7 @@ export default function NavigationBar() {
               color: "#22C086",
             }}
           >
-            Where we work
+            Work with us
           </Text>
         </MotionButton>
       </Link>
@@ -304,12 +311,7 @@ export default function NavigationBar() {
   );
   return (
     <React.Fragment>
-      <Box
-        // bgGradient="linear(rgba(34, 192, 134, 0.1) , transparent )"
-        w={"full"}
-        h={"200px"}
-        position={"absolute"}
-      >
+      <Box w={"full"} h={"200px"} position={"absolute"}>
         <chakra.header
           ref={ref}
           position={"absolute"}
@@ -336,46 +338,12 @@ export default function NavigationBar() {
                 md: "flex",
               }}
             >
-              {/* <NextLink passHref href="#">
-                <MotionButton
-                  backgroundColor={"transparent"}
-                  _focus={{ border: "none" }}
-                  _focusWithin={{ backgroundColor: "transparent" }}
-                  _hover={{
-                    backgroundColor: "transparent",
-                    cursor: "pointer",
-                  }}
-                  flexDirection={"row"}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                  whileHover={{
-                    scale: 1.1,
-                    color: cl,
-                  }}
-                  onClick={null} //update this
-                >
-                  <Text
-                    fontWeight={getPageIndex == 0 ? "black" : "thin"}
-                    fontSize="14px"
-                    color={getPageIndex == 0 ? "#22C086" : "#474747"}
-                    _dark={{
-                      color: getPageIndex == 0 ? "#22C086" : "gray",
-                    }}
-                    _hover={{
-                      color: "#22C086",
-                    }}
-                  >
-                    Home
-                  </Text>
-                </MotionButton>
-              </NextLink> */}
               <Link
                 activeClass="active"
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-102}
+                offset={-50}
                 duration={1000}
               >
                 <MotionButton
@@ -413,10 +381,10 @@ export default function NavigationBar() {
               </Link>
               <Link
                 activeClass="active"
-                to="proj"
+                to="whatwedo"
                 spy={true}
                 smooth={true}
-                offset={-48}
+                offset={-50}
                 duration={1000}
               >
                 <MotionButton
@@ -454,10 +422,51 @@ export default function NavigationBar() {
               </Link>
               <Link
                 activeClass="active"
-                to="services"
+                to="ourgoal"
                 spy={true}
                 smooth={true}
-                offset={-18}
+                offset={-50}
+                duration={1000}
+              >
+                <MotionButton
+                  backgroundColor={"transparent"}
+                  _focus={{ border: "none" }}
+                  _focusWithin={{ backgroundColor: "transparent" }}
+                  _hover={{
+                    backgroundColor: "transparent",
+                    cursor: "pointer",
+                  }}
+                  flexDirection={"row"}
+                  whileTap={{
+                    scale: 0.9,
+                  }}
+                  whileHover={{
+                    scale: 1.1,
+                    color: cl,
+                  }}
+                  onClick={null} //update this
+                >
+                  <Text
+                    fontWeight={getPageIndex == 2 ? "black" : "thin"}
+                    fontSize="14px"
+                    color={getPageIndex == 2 ? "#22C086" : "#474747"}
+                    _dark={{
+                      color: getPageIndex == 2 ? "#22C086" : "gray",
+                    }}
+                    _hover={{
+                      color: "#22C086",
+                    }}
+                  >
+                    Our goals
+                  </Text>
+                </MotionButton>
+              </Link>
+              <Link
+                activeClass="active"
+                to="workwithus"
+                spy={true}
+                smooth={true}
+                offset={-180}
                 duration={1000}
               >
                 <MotionButton
@@ -489,7 +498,7 @@ export default function NavigationBar() {
                       color: "#22C086",
                     }}
                   >
-                    Where we work
+                    Work with us
                   </Text>
                 </MotionButton>
               </Link>
