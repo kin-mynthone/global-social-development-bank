@@ -67,15 +67,7 @@ function MyApp({ Component, pageProps }) {
         )}
 
         <Component {...pageProps} />
-        {!getshowStartup && (
-          <MotionFlex
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 100 }}
-            transition={{ ease: "easeIn", duration: 10 }}
-          >
-            <Footer />
-          </MotionFlex>
-        )}
+        {!getshowStartup && <Footer />}
         <NextNProgress height={5} color="#22C086" />
       </Flex>
     </ChakraProvider>

@@ -5,6 +5,7 @@ import { MotionFlex } from "../constants/components/motion";
 import { startUpStore } from "../store/start_up";
 import "@fontsource/poppins";
 import { useWindowSize } from "../custom_hooks";
+import Router from "next/router";
 
 import { useEffect, useState } from "react";
 export default function Loading() {
@@ -24,7 +25,9 @@ export default function Loading() {
 
       if (showDelay == 0) {
         setTimeout(() => {
-          setshowStartup(false);
+          Router.push({
+            pathname: "/home",
+          });
         }, 3000);
       }
     }

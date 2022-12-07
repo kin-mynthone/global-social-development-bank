@@ -15,6 +15,8 @@ import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { BsArrowRightShort } from "react-icons/bs";
 import { chakra } from "@chakra-ui/react";
+import Router from "next/router";
+
 export default function Footer() {
   const { height, width } = useWindowSize();
 
@@ -81,48 +83,61 @@ export default function Footer() {
             columns={[1, 1, 2, 2, 2, 2]}
           >
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               About us
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
+              onClick={() => {
+                Router.push({
+                  pathname: "/news",
+                });
+              }}
             >
               News
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               What we do
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               Projects and Operations
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               Where we work
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               Countries
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >
               Join us
             </Text>
             <Text
+              as={"button"}
               color={"white"}
               fontSize={["12px", "12px", "14px", "14px", "14px", "15px"]}
             >

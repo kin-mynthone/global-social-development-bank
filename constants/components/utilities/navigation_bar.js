@@ -609,7 +609,7 @@ export default function NavigationBar() {
                 }}
                 variant="ghost"
                 icon={<AiOutlineMenu />}
-                onClick={mobileNav.onOpen}
+                onClick={mobileNav.onToggle}
               />
             </Box>
           </Flex>

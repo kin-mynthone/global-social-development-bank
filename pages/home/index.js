@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
-
 import {
   StackedCarousel,
   ResponsiveContainer,
@@ -22,22 +21,21 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
-import { MotionButton, MotionFlex } from "../constants/components/motion";
+import { MotionButton, MotionFlex } from "../../constants/components/motion";
 import { chakra } from "@chakra-ui/react";
-import { BsFillDiamondFill } from "react-icons/bs";
 import {
   CarouselContainer,
   NewsContainer,
   GoalContainer,
-} from "../constants/components/utilities";
-import { gsdbloading, bank, brain, agreement } from "../constants/data";
+} from "../../constants/components/utilities";
+import { gsdbloading, bank, brain, agreement } from "../../constants/data";
 import { FaTwitter, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram, AiFillFacebook } from "react-icons/ai";
 import { BsArrowRightShort } from "react-icons/bs";
-
-import { useWindowSize } from "../custom_hooks";
+import { startUpStore } from "../../store/start_up";
 import { useState, useEffect } from "react";
-import { startUpStore } from "../store/start_up";
+
+import { useWindowSize } from "../../custom_hooks";
 
 import "@fontsource/poppins";
 export default function Home() {
@@ -107,7 +105,7 @@ export default function Home() {
         position={"relative"}
       >
         <Flex
-          paddingTop={["2%", "2%", "2%", "2%", "5%", "5%"]}
+          paddingTop={["2%", "5%", "5%", "5%", "5%", "5%"]}
           w={"full"}
           direction="column"
           alignItems={"center"}
@@ -1368,16 +1366,22 @@ The Bank’s work also spans across several development goals and cross-cutting 
   }
 
   return (
-    <Box bgColor={"white"}>
-      <CallToAction />
-      <News />
-      <About />
-      <WHoWeAre />
-      <WhatWeDo />
-      <OurGoal />
-      <FollowUs />
-      <TopicsToRead />
-      <WorkWithUs />
-    </Box>
+    <MotionFlex
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 100, delay: 1 }}
+      transition={{ ease: "easeIn", duration: 10, delay: 1 }}
+    >
+      <Box bgColor={"white"}>
+        <CallToAction />
+        <News />
+        <About />
+        <WHoWeAre />
+        <WhatWeDo />
+        <OurGoal />
+        <FollowUs />
+        <TopicsToRead />
+        <WorkWithUs />
+      </Box>
+    </MotionFlex>
   );
 }

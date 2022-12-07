@@ -15,17 +15,7 @@ export default function Home() {
 
   return (
     <Box width={"full"} height={"full"}>
-      {getshowStartup ? (
-        <Loading />
-      ) : (
-        <MotionFlex
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 100, delay: 1 }}
-          transition={{ ease: "easeIn", duration: 10, delay: 1 }}
-        >
-          <Main />
-        </MotionFlex>
-      )}
+      <Loading />
     </Box>
   );
 }

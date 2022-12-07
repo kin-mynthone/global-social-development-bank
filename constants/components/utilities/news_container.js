@@ -21,18 +21,6 @@ const NewsContainer = (props) => {
   const { data, dataIndex } = props;
   const { title, date, category, desc, image } = data[dataIndex];
 
-  // const pushRoute = ({ pathname, collection_id, item_id, image, art_name }) => {
-  //   router.push({
-  //     pathname: pathname,
-  //     query: {
-  //       collection_id: collection_id,
-  //       image: image,
-  //       art_name: art_name,
-  //       item_id: item_id,
-  //     },
-  //   });
-  // };
-
   return (
     <Flex
       w={"full"}
@@ -58,10 +46,9 @@ const NewsContainer = (props) => {
       >
         <Flex
           alignSelf={"start"}
-          w={"100px"}
           mt={"30px"}
           height={"30px"}
-          backgroundColor={"#00CE7C"}
+          backgroundColor={"#16365F"}
           borderStartStartRadius={"0px"}
           borderEndStartRadius={"0px"}
           borderStartEndRadius={"10px"}
@@ -72,6 +59,7 @@ const NewsContainer = (props) => {
           zIndex={"10"}
         >
           <Text
+            paddingX={"10px"}
             fontSize={["12px", "12px", "12px", "12px", "12px", "12px"]}
             color={"white"}
             fontWeight={"black"}
