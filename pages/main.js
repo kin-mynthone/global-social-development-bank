@@ -43,63 +43,6 @@ export default function Home() {
 
   const { height, width } = useWindowSize();
 
-  function News() {
-    const dummyData = [
-      {
-        title: "Lorem ipsum dolor sit amet",
-        date: "OCT 14, 2022",
-        category: "Education",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
-
-        image:
-          "https://images.unsplash.com/photo-1636202339022-7d67f7447e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet",
-        date: "OCT 14, 2022",
-        category: "Agriculture",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
-
-        image:
-          "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
-      },
-      {
-        title: "Lorem ipsum dolor sit amet",
-        date: "OCT 14, 2022",
-        category: "Medicine",
-        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
-
-        image:
-          "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-      },
-    ];
-
-    const ref = React.useRef();
-    return (
-      <Flex
-        flexDir={["column", "column", "row", "row", "row", "row"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
-        position={"relative"}
-      >
-        <Flex w={"full"} direction="column" alignItems={"center"}>
-          <SimpleGrid
-            alignItems={"center"}
-            justifyItems={"center"}
-            pt={["50px", "50px", "50px", "50px", "50px", "50px"]}
-            spacingX={1}
-            spacingY={"50px"}
-            width={"85%"}
-            columns={[1, 1, 1, 1, 3, 3]}
-          >
-            {dummyData.map((entry, index) => (
-              <NewsContainer data={dummyData} dataIndex={index} />
-            ))}
-          </SimpleGrid>
-        </Flex>
-      </Flex>
-    );
-  }
-
   function CallToAction() {
     const dummyData = [
       {
@@ -154,7 +97,7 @@ export default function Home() {
     const ref = React.useRef();
     return (
       <Flex
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
+        width={width}
         flexDir={["column", "column", "row", "row", "row", "row"]}
         position={"relative"}
       >
@@ -247,11 +190,66 @@ export default function Home() {
     );
   }
 
+  function News() {
+    const dummyData = [
+      {
+        title: "Lorem ipsum dolor sit amet",
+        date: "OCT 14, 2022",
+        category: "Education",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
+
+        image:
+          "https://images.unsplash.com/photo-1636202339022-7d67f7447e3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet",
+        date: "OCT 14, 2022",
+        category: "Agriculture",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
+
+        image:
+          "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet",
+        date: "OCT 14, 2022",
+        category: "Medicine",
+        desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per",
+
+        image:
+          "https://images.unsplash.com/photo-1471864190281-a93a3070b6de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      },
+    ];
+
+    const ref = React.useRef();
+    return (
+      <Flex
+        flexDir={["column", "column", "row", "row", "row", "row"]}
+        position={"relative"}
+      >
+        <Flex w={"full"} direction="column" alignItems={"center"}>
+          <SimpleGrid
+            alignItems={"center"}
+            justifyItems={"center"}
+            pt={["50px", "50px", "50px", "50px", "50px", "50px"]}
+            spacingX={1}
+            spacingY={"50px"}
+            width={"85%"}
+            columns={[1, 1, 1, 1, 3, 3]}
+          >
+            {dummyData.map((entry, index) => (
+              <NewsContainer data={dummyData} dataIndex={index} />
+            ))}
+          </SimpleGrid>
+        </Flex>
+      </Flex>
+    );
+  }
+
   function About() {
     return (
       <Flex
         flexDir={["column", "column", "row", "row", "row", "row"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
         paddingTop={["2%", "2%", "2%", "2%", "5%", "10%"]}
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
@@ -453,7 +451,6 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
       <Flex
         flexDir={["column", "column", "row", "row", "row", "row"]}
         paddingTop={["20%", "2%", "2%", "2%", "10%", "10%"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <Flex
@@ -531,7 +528,6 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
       <Flex
         flexDir={["column", "column", "row", "row", "row", "row"]}
         paddingTop={["20%", "2%", "2%", "2%", "10%", "10%"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <Flex
@@ -752,7 +748,6 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
         flexDir={["column", "column", "row", "row", "row", "row"]}
         paddingTop={["20%", "2%", "2%", "2%", "10%", "10%"]}
         paddingBottom={["20%", "2%", "2%", "2%", "10%", "10%"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <Flex
@@ -813,7 +808,6 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
         py={["5%", "2%", "2%", "2%", "2%", "2%"]}
         alignItems={"start"}
         justifyContent={"space-around"}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
         bgColor={"#16365F"}
       >
         <SimpleGrid
@@ -1031,7 +1025,6 @@ The GLSDB-team of senior executive consultants is able to advise you on project 
       <Flex
         flexDir={["column", "column", "row", "row", "row", "row"]}
         paddingY={["20%", "2%", "2%", "2%", "10%", "10%"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
       >
         <VStack alignItems={"start"} spacing={"55px"} width={"100%"} px={"10%"}>
           <VStack alignItems={"start"} spacing={"-2px"} width={"100%"}>
@@ -1166,11 +1159,9 @@ The Bank’s work also spans across several development goals and cross-cutting 
       <Flex
         flexDir={["column", "column", "row", "row", "row", "row"]}
         height={["60em", "60em", "60em", "60em", "100vh", "80vh"]}
-        width={[width, width - 14, width - 14, width - 14, width, width - 14]}
         bgColor={"#16365F"}
         alignItems={"end"}
         justifyContent={"end"}
-        style={{ overflow: "hidden" }}
       >
         <Box
           boxSize="full"
@@ -1372,7 +1363,7 @@ The Bank’s work also spans across several development goals and cross-cutting 
   }
 
   return (
-    <Box bgColor={bg1}>
+    <Box bgColor={"white"}>
       <CallToAction />
       <News />
       <About />

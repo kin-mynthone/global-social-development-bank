@@ -25,6 +25,7 @@ export default function Footer() {
       flexDir={"column"}
       justifyContent={"center"}
       alignItems={"center"}
+      position={"relative"}
     >
       <Flex
         flexDir={"column"}

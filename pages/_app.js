@@ -50,7 +50,11 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <Flex alignItems={"stretch"} flexDirection={"column"} width={width}>
+      <Flex
+        alignItems={"stretch"}
+        flexDirection={"column"}
+        style={{ overflowX: "hidden" }}
+      >
         {!getshowStartup && (
           <MotionFlex
             initial={{ opacity: 0 }}
